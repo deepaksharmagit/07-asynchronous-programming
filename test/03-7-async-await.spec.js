@@ -1,4 +1,4 @@
-describe("Promise Hell", () => {
+describe("Async/Await Hell", () => {
   let originalConsoleLog;
   let logSpy;
 
@@ -17,17 +17,10 @@ describe("Promise Hell", () => {
     console.log = originalConsoleLog;
   });
 
-  // Testing Promise Hell
-  it("should test for the function to be logged in order: 'Data fetched!' 'Data processed!' 'Data displayed'", (done) => {
-    // Chain promises to ensure execution order
-    // convert setTimeout to a promise
-    const setTimeoutPromise = (delay) => {
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          resolve();
-        }, delay);
-      });
-    };
+  // Testing Async/Await Hell
+  it("should test for the function to be logged in order: 'Data fetched!' 'Data processed!' 'Data displayed!'", (done) => {
+    // Execute the async function
+    // await fetchDataAndProcessAsync();
 
     setTimeout(() => {
       // Assertions

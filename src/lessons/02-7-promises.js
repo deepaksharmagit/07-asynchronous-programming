@@ -1,22 +1,29 @@
-// Task 2 (Using Promises)
-function fetchDataWithPromise() {
-  return new Promise(function (resolve, reject) {
-    setTimeout(function () {
+function fetchDataPromise() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      // Log "Data fetched!" to the console
       console.log("Data fetched!");
+      // Invoke the callback function
       resolve();
-    }, 2000);
+    }, 1000);
   });
 }
 
-fetchDataWithPromise()
-  .then(function () {
-    return new Promise(function (resolve, reject) {
-      setTimeout(function () {
-        console.log("Data processed!");
-        resolve();
-      }, 1500);
-    });
-  })
-  .then(function () {
-    console.log("Data displayed!");
+function processDataPromise() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("Data processed!");
+      resolve();
+    }, 500);
   });
+}
+
+function displayData() {
+  console.log("Data displayed!");
+}
+
+// Use .then() to chain promises
+fetchDataPromise()
+  .then(() => processDataPromise())
+  .then(() => displayData())
+  .catch((error) => console.error(error));
