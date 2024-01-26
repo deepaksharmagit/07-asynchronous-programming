@@ -2,7 +2,7 @@ function fetchDataPromise() {
   return new Promise((resolve) => {
     setTimeout(() => {
       // Log "Data fetched!" to the console
-      // Invoke the callback function
+      // Invoke the resolve function
     }, 1000);
   });
 }
