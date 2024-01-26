@@ -1,8 +1,9 @@
-// Task 1 (Using Async/Await)
 async function fetchDataAsync() {
   return new Promise(function (resolve) {
     setTimeout(function () {
+      // Log "Data fetched!" to the console
       console.log("Data fetched!");
+      // Invoke the resolve function
       resolve();
     }, 1000);
   });
@@ -21,8 +22,17 @@ function displayData() {
   console.log("Data displayed!");
 }
 
+/**
+ * Use the functions above to log the following in otder to the console:
+ *
+ * "Data fetched!"
+ * "Data processed!"
+ * "Data displayed!"
+ *
+ * Use async/await syntax
+ *
+ *  */
 async function fetchDataAndProcess() {
-  // Use await to wait for promises to resolve
   await fetchDataAsync();
   await processDataAsync();
   displayData();

@@ -1,4 +1,4 @@
-describe("Promise Hell", () => {
+describe("Promises", () => {
   let originalConsoleLog;
   let logSpy;
 

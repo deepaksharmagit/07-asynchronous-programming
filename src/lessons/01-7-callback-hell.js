@@ -1,4 +1,3 @@
-// Task 1 (Callback Hell)
 function fetchData(callback) {
   setTimeout(function () {
 <<<<<<< HEAD
@@ -33,10 +32,15 @@ function displayData() {
 // Usage of callback hell
 =======
 /**
- * Use fetchData, processData, and displayData to log the following in otder to the console:
+ * Use the function above to log the following in otder to the console:
+ *
  * "Data fetched!"
  * "Data processed!"
  * "Data displayed!"
+ *
+ * Use callback syntax
+ * https://dev.to/jerrycode06/callback-hell-and-how-to-rescue-it-ggj
+ *
  *  */
 >>>>>>> solutions
 fetchData(function () {
