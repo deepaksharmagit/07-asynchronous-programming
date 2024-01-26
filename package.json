@@ -8,8 +8,7 @@
     "test:local-1": "cross-env open SpecRunner-1.html",
     "test:local-2": "cross-env open SpecRunner-2.html",
     "test:local-3": "cross-env open SpecRunner-3.html",
-    "test:local-4": "cross-env open SpecRunner-4.html",
-    "test:remote": "karma start"
+    "test:local-4": "cross-env open SpecRunner-4.html"
   },
   "keywords": [],
   "author": "Web Bae",
