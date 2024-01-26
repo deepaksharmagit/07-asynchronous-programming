@@ -4,7 +4,8 @@
   "description": "Get started with Javascript",
   "scripts": {
     "start": "npm install",
-    "test:local": "open SpecRunner.html",
+    "test:local-0": "cross-env open SpecRunner-0.html",
+    "test:local-1": "cross-env open SpecRunner-1.html",
     "test:remote": "karma start"
   },
   "keywords": [],
@@ -15,6 +16,7 @@
     "jasmine-core": "^5.1.1",
     "karma": "^6.4.2",
     "karma-chrome-launcher": "^3.2.0",
-    "karma-jasmine": "^5.1.0"
+    "karma-jasmine": "^5.1.0",
+    "cross-env": "^7.0.3"
   }
 }
