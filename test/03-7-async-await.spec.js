@@ -1,4 +1,4 @@
-describe("Async/Await Hell", () => {
+describe("Async/Await", () => {
   let originalConsoleLog;
   let logSpy;
 

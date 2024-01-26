@@ -1,4 +1,4 @@
-describe("fetchDataAndProcess", () => {
+describe("Fetch", () => {
   let originalConsoleLog;
   let logSpy;
   let intervalId;

@@ -22,7 +22,16 @@ function displayData() {
   console.log("Data displayed!");
 }
 
-// Use .then() to chain promises
+/**
+ * Use the functions above to log the following in otder to the console:
+ *
+ * "Data fetched!"
+ * "Data processed!"
+ * "Data displayed!"
+ *
+ * Use .then() and .catch() to chain promises
+ *
+ *  */
 fetchDataPromise()
   .then(() => processDataPromise())
   .then(() => displayData())
