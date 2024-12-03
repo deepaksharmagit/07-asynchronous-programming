@@ -8,7 +8,22 @@
  * If the response is not ok, throw an error. Use try/catch.
  *
  */
-async function fetchDataAsync() {}
+async function fetchDataAsync() {
+ try {
+  const response = await fetch(
+    "https://jsonplaceholder.typicode.com/posts/3"
+  );
+  if(!response.ok){
+    throw new Error("Network response was not okay");
+  }
+   const data = await response.json();
+   return data;
+ }  catch (error) {
+   console.error("Error fetching data:", error);
+   throw error;
+ }
+
+}
 
 async function fetchDataAndProcess() {
   try {
