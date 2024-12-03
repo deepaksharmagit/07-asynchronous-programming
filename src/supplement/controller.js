@@ -10,16 +10,33 @@ class QuoteController {
     // Register a click event handler for the "Get Quote" button.
     // Using .bind(this) ensures that the context (value of 'this') remains the QuoteController instance
     // when the event handler is called. This allows access to controller methods and properties.
-
+      this.view.getNewQuoteButtonHander(this.getAndDisplayNewQuote.bind(this));
     // Register a form submit event handler for adding new quotes.
     // Similarly, .bind(this) maintains the correct context for the addQuote method.
+    this.view.addQuoteFormHandler(this.addQuote.bind(this));
   }
 
   // Method to fetch and display a new random quote.
-  async getAndDisplayNewQuote() {}
+  async getAndDisplayNewQuote() {
+    try {
+      const data = await this.model.fetchQuotes();
+      const random = Math.floor(Math.random() * data.length);
+      this.view.displayQuote(data[random].quote);
+    } catch (error) {
+      console.error("Error:", error );
+    }
+  }
 
   // Method to add a new quote to the Model and update the View.
-  async addQuote(quote) {}
+  async addQuote(quote) {
+    try {
+      await this.model.postQuote(quote);
+      this.getAndDisplayNewQuote();
+
+    } catch (error) {
+      console.error("Error:", error );
+    }
+  }
 }
 
 export default QuoteController;
